@@ -2,7 +2,7 @@
 
 Node Js service work running on Docker in Heroku
 
-There is a service structure that pulls current data from the central bank
+There is a service structure that pulls current data from the Central Bank
 
 Request to Api Url :
 
