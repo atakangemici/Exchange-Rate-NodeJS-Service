@@ -2,7 +2,7 @@ name: Docker
 
 on:
   push:
-    # Publish `master` as Docker `latest` exchangeRate.
+    # Publish `master` as Docker `latest` exchangerate.
     branches:
       - master
 
@@ -14,8 +14,8 @@ on:
   pull_request:
 
 env:
-  # TODO: Change variable to your exchangeRate's name.
-  IMAGE_NAME: exchangeRate
+  # TODO: Change variable to your exchangerate's name.
+  IMAGE_NAME: exchangerate
 
 jobs:
   # Run tests.
@@ -35,10 +35,10 @@ jobs:
             docker build . --file Dockerfile
           fi
 
-  # Push exchangeRate to GitHub Packages.
+  # Push exchangerate to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
   push:
-    # Ensure test job passes before pushing exchangeRate.
+    # Ensure test job passes before pushing exchangerate.
     needs: test
 
     runs-on: ubuntu-latest
@@ -47,13 +47,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build exchangeRate
+      - name: Build exchangerate
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
 
-      - name: Push exchangeRate
+      - name: Push exchangerate
         run: |
           IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/$IMAGE_NAME
 
