@@ -1,1 +1,1 @@
-# Exchange-Rate-NodeJS-Service
+# Exchange Rate NodeJS Service
