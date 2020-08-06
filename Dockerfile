@@ -1,15 +1,7 @@
-FROM node:latest
-
-RUN mkdir /app
+FROM node:10
 WORKDIR /app
-
-ENV PATH /app/node_modules/.bin:$PATH
-
-COPY package.json package-lock.json /app/
+COPY package.json /app
 RUN npm install
-
-# Or if you're using Yarn
-# ADD package.json yarn.lock /app/
-# RUN yarn install
-
-COPY . /app/
+COPY . /app
+CMD node app.js
+EXPOSE 3000
