@@ -1,4 +1,4 @@
-# Exchange Rate NodeJS Service
+# Exchange Rate NodeJS Service Example
 
 Node Js service work running on Docker in Heroku
 
