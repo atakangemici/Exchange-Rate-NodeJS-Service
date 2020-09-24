@@ -1,6 +1,6 @@
 # Exchange Rate NodeJS Service Example
 
-Node Js service work running on Docker in Heroku
+Node Js service running on Docker and Heroku
 
 There is a service structure that pulls current data from the Central Bank
 
